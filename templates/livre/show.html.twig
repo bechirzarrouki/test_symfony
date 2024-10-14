@@ -1,0 +1,14 @@
+{% for livre in livres %}
+
+<tr>
+<br>
+<td>{{livre.id}}</td>
+
+<td>{{livre.title}}</td>
+<td>{{livre.nbrPage}}</td>
+<a href="{{ path('apps7_author', { 'id': livre.id }) }}">
+    <button>Remove</button>
+</a>
+
+<tr>
+{% endfor %}
